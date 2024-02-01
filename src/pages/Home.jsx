@@ -1,3 +1,4 @@
+import { Card } from "../componentes/Card"
 import { useEffect, useState } from "react"
 
 export const Home = () => {
@@ -16,6 +17,19 @@ export const Home = () => {
     }, [])
 
     return (
-        <div>Home</div>
+        <>
+        <h1>Pokemons: </h1>
+        <hr />
+
+        {pokemons.map(pokemon => (
+            <Card
+                key={pokemon.name}
+                nombre={pokemon.name}
+                url={pokemon.url}
+            >
+
+            </Card>
+        ))}
+        </>
     )
 }

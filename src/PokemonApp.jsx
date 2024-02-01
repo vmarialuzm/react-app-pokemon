@@ -11,7 +11,7 @@ export const PokemonApp = () => {
             <Routes>
                 <Route>
                     <Route path="/" element={<Home></Home>}></Route>
-                    <Route path="/perfil" element={<Perfil></Perfil>}></Route>
+                    <Route path="/:id" element={<Perfil></Perfil>}></Route>
                     <Route path="/*" element={<Navigate to='/' />}></Route>
                 </Route>
             </Routes>
